@@ -28,7 +28,7 @@
 #import "BOINCClientManager.h"
 #import "BOINCKeychain.h"
 #import "BOINCKeychainItem.h"
-#import <Keychain/KeychainItem.h>
+#import "Keychain/KeychainItem.h"
 #import "BOINCLogInWindowController.h"
 
 #import "BB_XMLNodeXPathCategory.h"

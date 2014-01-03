@@ -24,6 +24,7 @@
 /* Begin PBXBuildFile section */
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		BB48E88218769FDB0069CED7 /* Keychain in Resources */ = {isa = PBXBuildFile; fileRef = BB48E88118769FDB0069CED7 /* Keychain */; };
 		D8012CC00DE00EE90063BD66 /* BOINCGlobalPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = D8012CBF0DE00EE90063BD66 /* BOINCGlobalPreferences.m */; };
 		D80187260F2418FB00C8B5C2 /* BOINCLogInWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80187240F2418FB00C8B5C2 /* BOINCLogInWindowController.m */; };
 		D8052A9D0EBEE6D90093447B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8052A9C0EBEE6D90093447B /* AddressBook.framework */; };
@@ -184,6 +185,7 @@
 		32CA4F630368D1EE00C91783 /* BOINCMenubar_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOINCMenubar_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* BOINCMenubar 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BOINCMenubar 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB48E88118769FDB0069CED7 /* Keychain */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Keychain; sourceTree = "<group>"; };
 		D8012CBE0DE00EE90063BD66 /* BOINCGlobalPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOINCGlobalPreferences.h; path = "BOINC Model/BOINCGlobalPreferences.h"; sourceTree = "<group>"; };
 		D8012CBF0DE00EE90063BD66 /* BOINCGlobalPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOINCGlobalPreferences.m; path = "BOINC Model/BOINCGlobalPreferences.m"; sourceTree = "<group>"; };
 		D80187240F2418FB00C8B5C2 /* BOINCLogInWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOINCLogInWindowController.m; sourceTree = "<group>"; };
@@ -538,6 +540,7 @@
 		D84E27F40DA7DDE7002E7734 /* CoreBOINC */ = {
 			isa = PBXGroup;
 			children = (
+				BB48E88118769FDB0069CED7 /* Keychain */,
 				D8342DCB0DA9C61B00EA0FBD /* BOINCCommonConstants.h */,
 				D8F4C6E80DD0D4FB0090818A /* BOINCCommonConstants.m */,
 				D877B0F20DB9A12900FFE1B5 /* BOINCClientManager.h */,
@@ -766,7 +769,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "BOINCMenubar" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -827,6 +830,7 @@
 				D88B8B190F92CD0B006BA4C1 /* License.txt in Resources */,
 				D8DE4F130FA49F6900015959 /* AccountManagerDescription.html in Resources */,
 				D8DE4F150FA49F6900015959 /* AccountManagerWithoutDescription.html in Resources */,
+				BB48E88218769FDB0069CED7 /* Keychain in Resources */,
 				D8A821C00FA929AD0043E41A /* BOINCAttachToAccountManager.xib in Resources */,
 				D85F9A890FACFD9D00BBD8B2 /* BOINCSyncWithAccountManager.xib in Resources */,
 				D85F9A8E0FAD08B100BBD8B2 /* AccountManagerNotes.html in Resources */,
@@ -1188,8 +1192,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				CODE_SIGN_IDENTITY = Brotherbard;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1205,7 +1209,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BOINCMenubar_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				IBC_NOTICES = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
@@ -1230,8 +1234,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = Brotherbard;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = NO;
@@ -1243,7 +1247,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BOINCMenubar_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Applications;
 				LD_RUNPATH_SEARCH_PATHS = "";
@@ -1257,10 +1261,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_64_BIT)",
-					ppc,
-				);
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -1308,7 +1308,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = (
 					"-Wall",
@@ -1325,10 +1325,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_64_BIT)",
-					ppc,
-				);
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1368,7 +1364,7 @@
 				IBC_FLATTEN_NIBS = NO;
 				OTHER_CFLAGS = "";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx;
 				SEPARATE_STRIP = NO;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = all;
@@ -1379,12 +1375,14 @@
 		D844529110791422001FE89D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 			};
 			name = Debug;
 		};
 		D844529210791422001FE89D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 			};
 			name = Release;
 		};
